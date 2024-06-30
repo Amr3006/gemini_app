@@ -75,6 +75,7 @@ class RegisterScreen extends StatelessWidget {
                                     type: TextInputType.emailAddress,
                                     validatorText: "Please enter your e-mail"),
                                 Gaps.medium_Gap,
+                                // note
                                 AuthTextFormField(
                                     controller: cubit.passwordController,
                                     hintText: "Password",
@@ -90,7 +91,7 @@ class RegisterScreen extends StatelessWidget {
                                 MaterialButton(
                                   onPressed: () {
                                     if (key.currentState!.validate()) {
-                                      
+
                                     }
                                   },
                                   minWidth: screen_width,
