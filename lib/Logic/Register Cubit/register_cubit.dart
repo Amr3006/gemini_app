@@ -8,4 +8,13 @@ class RegisterCubit extends Cubit<RegisterState> {
 
   static RegisterCubit get(BuildContext context) => BlocProvider.of(context);
 
+  var emailController = TextEditingController();
+  var nameController = TextEditingController();
+  var passwordController = TextEditingController();
+  var obscured = false;
+
+  void changeObscurity() {
+    obscured = !obscured;
+    emit(ChangeObscurityState());
+  }
 }
