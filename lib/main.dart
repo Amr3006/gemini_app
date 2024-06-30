@@ -5,13 +5,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gemini_app/Logic/bloc_observer.dart';
-import 'package:gemini_app/Shared/Constants/Dimensions.dart';
+import 'package:gemini_app/Shared/Constants/dimenstions.dart';
 import 'package:gemini_app/Shared/Core/app_routes.dart';
 import 'package:gemini_app/Shared/Core/firebase_options.dart';
-import 'package:gemini_app/Shared/Design/Theme.dart';
+import 'package:gemini_app/Shared/Design/themes.dart';
+import 'package:gemini_app/Shared/Helpers/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await CacheHelper.inti();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: lightTheme,
-          home: AppRoutes.loginScreen),
+          home: AppRoutes.firstScreen()),
     );
   }
 }

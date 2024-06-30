@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:gemini_app/Shared/Constants/Dimensions.dart';
+import 'package:gemini_app/Shared/Constants/dimenstions.dart';
 
 Widget AuthTextFormField({
     required TextEditingController controller,
