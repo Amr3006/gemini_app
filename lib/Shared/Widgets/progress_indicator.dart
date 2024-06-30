@@ -7,7 +7,7 @@ class AppProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget indicator = const CircularProgressIndicator();
+    Widget indicator = CircularProgressIndicator(color: Colors.white.withOpacity(0.85),);
     if (Platform.isIOS) {
       indicator = const CupertinoActivityIndicator();
     }
