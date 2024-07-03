@@ -72,7 +72,7 @@ class RegisterScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "REGISTERR",
+                                    "REGISTER",
                                     style: GoogleFonts.aBeeZee(
                                         color: Colors.white.withOpacity(0.85),
                                         fontWeight: FontWeight.normal,
