@@ -35,13 +35,12 @@ class RegisterCubit extends Cubit<RegisterState> {
         name: nameController.text,
         email: emailController.text,
         profilePicture:
-            "https://wallpapers-clan.com/wp-content/uploads/2023/01/anime-aesthetic-boy-pfp-1.jpg",
-        uId: user!.uid);
+            "https://wallpapers-clan.com/wp-content/uploads/2023/01/anime-aesthetic-boy-pfp-1.jpg",);
     emit(LoadingCreateUserState());
     try {
       await _firestore
           .collection("Users")
-          .doc(user.uid)
+          .doc(user!.uid)
           .set(userModel.toJson());
       bool saved = await saveuId(user);
       if (!saved) {
