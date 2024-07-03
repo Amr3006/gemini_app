@@ -57,7 +57,7 @@ class RegisterScreen extends StatelessWidget {
                   filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
                   child: ConditionalBuilder(
                     condition: conditions.contains(true),
-                    builder: (context) => const AppProgressIndicator(),
+                    builder: (context) => AppProgressIndicator(Colors.white.withOpacity(0.85)),
                     fallback: (context) => SingleChildScrollView(
                       child: Container(
                         width: screen_width,
@@ -72,7 +72,7 @@ class RegisterScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Text(
-                                    "REGISTERR",
+                                    "REGISTER",
                                     style: GoogleFonts.aBeeZee(
                                         color: Colors.white.withOpacity(0.85),
                                         fontWeight: FontWeight.normal,

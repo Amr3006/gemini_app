@@ -55,7 +55,7 @@ class LoginScreen extends StatelessWidget {
                   filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
                   child: ConditionalBuilder(
                     condition: state is! LoadingLoginState,
-                    fallback: (context) => AppProgressIndicator(),
+                    fallback: (context) => AppProgressIndicator(Colors.white.withOpacity(0.85)),
                     builder: (context) => SingleChildScrollView(
                       child: Container(
                         width: screen_width,

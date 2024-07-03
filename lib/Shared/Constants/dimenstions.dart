@@ -16,6 +16,14 @@ class Pads{
   static final small_Padding = EdgeInsets.all(8.r);
   static final medium_Padding = EdgeInsets.all(16.r);
   static final large_Padding = EdgeInsets.all(24.r);
+
+  static final v_small_Padding = EdgeInsets.symmetric(vertical: 8.r);
+  static final v_medium_Padding = EdgeInsets.symmetric(vertical: 16.r);
+  static final v_large_Padding = EdgeInsets.symmetric(vertical: 24.r);
+
+  static final h_small_Padding = EdgeInsets.symmetric(horizontal: 8.r);
+  static final h_medium_Padding = EdgeInsets.symmetric(horizontal: 16.r);
+  static final h_large_Padding = EdgeInsets.symmetric(horizontal: 24.r);
 }
 
 // Screen Dimenstions
